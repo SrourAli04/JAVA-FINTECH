@@ -24,5 +24,8 @@ public class Account {
     @Column(name = "account_status")
     private String status;
 
+    @ManyToOne
+    @JoinColumn(name = "account_holder_id")
+    private AccountHolder accountHolder;
 
 }

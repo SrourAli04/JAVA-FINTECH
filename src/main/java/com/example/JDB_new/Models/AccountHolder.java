@@ -3,6 +3,8 @@ package com.example.JDB_new.Models;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -31,7 +33,10 @@ public class AccountHolder {
 
     @Column(name = "mother_name")
     private String motherName;
-    
+
+    @OneToMany(mappedBy = "account_holder_id")
+    private List<Account> accounts = new ArrayList<>();
+
 
 
 }

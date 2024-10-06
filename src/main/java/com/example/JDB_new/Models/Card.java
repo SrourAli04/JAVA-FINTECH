@@ -6,6 +6,8 @@ import lombok.Setter;
 import org.springframework.context.annotation.Primary;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -28,5 +30,7 @@ public class Card {
     @Column(name = "CVV")
     private String cvv;
 
+    @ManyToMany
+    private Set<Card> cards = new HashSet();
 }
 
