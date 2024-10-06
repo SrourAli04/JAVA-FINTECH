@@ -34,7 +34,7 @@ public class AccountHolder {
     @Column(name = "mother_name")
     private String motherName;
 
-    @OneToMany(mappedBy = "account_holder_id")
+    @OneToMany(mappedBy = "accountHolder")
     private List<Account> accounts = new ArrayList<>();
 
 
